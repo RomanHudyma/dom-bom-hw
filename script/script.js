@@ -17,7 +17,7 @@ inputUsername.placeholder = "Username";
 
 inputDate.type = "text";
 inputDate.name = "date";
-inputDate.placeholder = "Date dd/mm/yyyy";
+inputDate.placeholder = "Date MM/DD/YYYY";
 
 inputSubmit.value = "Validate Me";
 inputSubmit.type = "submit"; 
@@ -48,7 +48,7 @@ function validate(event) {
 		inputAge.value.includes("e") ||
 		inputUsername.value.indexOf("user_") !== 0 ||
 		!regExpDate.test(inputDate.value) ||
-    inputDate.value != moment().format('L') ) {
+    inputDate.value !== moment().format('L') ) {
 			alert("Your input is not valid!");
 			return false;
 	} else {
