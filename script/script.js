@@ -48,7 +48,7 @@ function validate(event) {
 		inputAge.value.includes("e") ||
 		inputUsername.value.indexOf("user_") !== 0 ||
 		!regExpDate.test(inputDate.value) ||
-    inputDate.value !== moment().format('L') ) {
+    inputDate.value != moment().format('L') ) {
 			alert("Your input is not valid!");
 			return false;
 	} else {
